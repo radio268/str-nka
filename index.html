@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pootis</title>
+    <style>
+        /* General Styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px; /* Add padding for better click/tap experience */
+            border-radius: 5px;
+        }
+         nav ul li a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+        nav ul li a.active {
+        background-color: #fff;
+        color: #333;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .side-panel {
+            background-color: #ddd;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: auto;
+        }
+
+        /* Media Query for Tablet/Desktop */
+        @media (min-width: 768px) {
+            main {
+                flex-direction: row;
+                justify-content: center;
+            }
+        .side-panel {
+            order: -1; /* Move the side-panel to the left */
+            margin-right: 20px; /* Add some margin for better separation */
+        }
+        .content {
+            margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="fontbolt1.png" alt="fontbolt1">
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#rules">Mods</a></li>
+                <li><a href="#downloads">Rules</a></li>
+                <li><a href="#contact">Dynmap</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#contact">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="side-panel">
+            <h2>Server Info</h2>
+            <p>Server IP: pootis.mc.hostify.cz</p>
+            <p>Version: 1.16.5</p>
+            <!-- Add more server info or widgets here -->
+        </div>
+
+        <div class="content">
+            <section id="home">
+                <h2>Useless weekly news!</h2>
+                <p>Did you know, that we started working on this right now? Crazy, right?.</p>
+                <!-- Add more information about your server here -->
+            </section>
+
+            <section id="rules">
+                <h2>Rules</h2>
+                <p>Basic rules for idiots: </p>
+                <ol>
+                    <li>Use mods</li>
+                    <li>No friendship stones</li>
+                    <li>Don't Have fun</li>
+                    <li>No Vyšinka allowed</li>
+                </ol>
+            </section>
+
+            <section id="downloads">
+                <h2>Downloads</h2>
+                <p>Download the necessary files to join our server:</p>
+                <a href="link-to-download">Download Here</a>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or issues, feel free to contact us at: maresmilan@post.cz</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pootis</p>
+    </footer>
+</body>
+
+</html>
