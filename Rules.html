@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pootis</title>
+    <style>
+        /* General Styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px; /* Add padding for better click/tap experience */
+            border-radius: 5px;
+        }
+         nav ul li a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .side-panel {
+            background-color: #ddd;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: auto;
+        }
+
+        /* Media Query for Tablet/Desktop */
+        @media (min-width: 768px) {
+            main {
+                flex-direction: row;
+                justify-content: center;
+            }
+        .side-panel {
+            order: -1; /* Move the side-panel to the left */
+            margin-right: 20px; /* Add some margin for better separation */
+        }
+        .content {
+            margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="fontbolt1.png" alt="fontbolt1">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rules">Mods</a></li>
+                <li><a href="#downloads">Rules</a></li>
+                <li><a href="#contact">Dynmap</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#contact">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <section id="hacking">
+                <h2>1. No hacking</h2>
+                <p>Please, do not hack on our server, it ruins the atmosphere and we're not 2b2t.</p>
+            </section>
+      
+            <section id="mods">
+                <h2>2. No mods, that control players or automate actions</h2>
+                <p>We do not support these mods. Again, they ruin the experience and controlling players is just not ok.</p>
+            </section>
+        
+            <section id="logging">
+                <h2>3. No logging into other players's accounts</h2>
+                <p>Just don't do it. Trust me, it's not a good idea.</p>
+            </section>
+       
+       
+            <section id="lag machines">
+                <h2>4. No lag machines</h2>
+                <p>No building lag machines or anything that slowes down game performance. Ever. Or we ban you forever.(A very long time)</p> 
+            </section>
+        
+     
+            <section id="trapping">
+                <h2>5. No nether portal trapping or chunkbanning players</h2>
+               <p>Do not trap people, it's bad for your soul. And if you have no soul, just annoy them, that's allowed.</p>
+              
+            </section>
+       
+        
+            <section id="friendship stones">
+                <h2>Recommendation: DON'T ACCEPT FRIENDSHIP STONES</h2>
+                <p>It's not a good idea and you know it.</p>
+            </section>
+
+            <section id="banning">
+                <h2>Note</h2>
+                <p>The admins of the server have the power to ban anyone without any reason. Please don't act unnatural but don't be a jerk.</p>
+                <p>Note 2<br>
+                If the player giving out friendship stones is an admin, accept them every time.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pootis</p>
+    </footer>
+</body>
+
+</html>
