@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pootis</title>
+    <style>
+        /* General Styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px; /* Add padding for better click/tap experience */
+            border-radius: 5px;
+        }
+         nav ul li a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+        nav ul li a.active {
+        background-color: #fff;
+        color: #333;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .side-panel {
+            background-color: #ddd;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            margin-top: auto;
+        }
+
+        /* Media Query for Tablet/Desktop */
+        @media (min-width: 768px) {
+            main {
+                flex-direction: row;
+                justify-content: center;
+            }
+        .side-panel {
+            order: -1; /* Move the side-panel to the left */
+            margin-right: 20px; /* Add some margin for better separation */
+        }
+        .content {
+            margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="fontbolt1.png" alt="fontbolt1">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Mods.html" class = "active">Mods</a></li>
+                <li><a href="Rules.html">Rules</a></li>
+                <li><a href="#contact">Dynmap</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <section id="CC">
+                <h2>CC: Tweaked</h2>
+                <p>CC: Tweaked is a mod for Minecraft which adds programmable computers, turtles and more to the game. A fork of the much-beloved ComputerCraft, it continues its legacy with improved performance and stability, along with a wealth of new features.</p>
+                <img src="https://cdn.modrinth.com/data/r7tyeVvQ/images/b70b74c950a36d16ef9c32219fa5b406cb94e116.png">
+            </section>
+      
+            <section id="MT">
+                <h2>Mouse Tweaks</h2>
+                <p>Mouse Tweaks replaces the standard RMB dragging mechanic, adds two new LMB dragging mechanics and an ability to quickly move items with the scroll wheel.</p>
+                <img src="https://i.imgur.com/JDjsE.png?2">
+              
+            </section>
+        
+            <section id="MRCI">
+                <h2>More Red Computercraft Integration</h2>
+                <p>More Red Computercraft Integration is a forge mod that adds an adapter between More Red's bundled cables and Computercraft's computers. This block can be crafted at More Red's gatecrafting plinth.</p>
+                <p>This mod depends on both More Red and CC:Tweaked, and both of these mods must be installed for More Red Computercraft Integration to work.</p>
+                <img src="https://media.forgecdn.net/attachments/368/914/mrcc_adapter.png">
+            </section>
+       
+       
+            <section id="MR">
+                <h2>More Red</h2>
+                <p>More Red is a minecraft forge mod that adds numerous things related to redstone power, signals, and logic such as these:</p>
+                 <p>Redstone logic gates can be placed in any orientation.<br> Previews of certain blocks are rendered to assist with orienting them.<br> Redstone wires can be draped across moderate distances.<br> Red Alloy Wires, Colored Network Cables, and Bundled Network Cables can be placed on any solid surface.<br> Bundled Cables have long-range hanging wires as well.<br> Innumerable strange contraptions can be made</p>
+                <img src="https://media.forgecdn.net/attachments/348/440/blockless_bundled_cables.png">
+            </section>
+        
+     
+            <section id="AE2">
+                <h2>Applied Energetistics</h2>
+               <p>Applied Energistics 2 is a mod created by AlgorithmX2 designed to compactly store items in a digital network called Matter Energy, or ME (pronounced Emm-Eee). It is the new and overhauled version of the original Applied Energistics mod. Different devices can be connected to the ME Network, such as an ME Drive, for the storage of items, or an ME Terminal, allowing for access to that storage. </p>
+               <img src = "https://i.imgur.com/K02yDrh.png">
+            </section>
+       
+        
+            <section id="JEI">
+                <h2>Just Enough Items (JEI)</h2>
+                <p>JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance.</p>
+                <img src= "https://i.imgur.com/YTuxxOL.png">
+            </section>
+    
+     
+            <section id="JF">
+                <h2>Jumbo Furnace</h2>
+                <p>Jumbo Furnace is a forge mod that adds the Jumbo Furnace. The Jumbo Furnace can be created by placing 27 furnace blocks in a 3x3x3 cube. You can itemize the jumbo furnace by using shears on it or baking 27 furnaces in a jumbo furnace.</p>
+                <p>The Jumbo Furnace has a larger inventory than a regular furnace. Because the Jumbo Furnace can smelt multiple recipes at a time, it has a fixed cooking cycle time for all jumbo smelting recipes (specified in your world folder's serverconfig/jumbofurnace-server.toml file). Vanilla smelting recipes with higher cooking times than jumbo furnace's cycle time cannot be smelted in the jumbo furnace.</p>
+                <img src="https://media.forgecdn.net/attachments/298/545/splash.png">
+            </section>
+       
+  
+            <section id="SDM">
+                <h2>Storage Drawers Mod</h2>
+                <p>Put your most frequently used items within convenient reach. Storage Drawers borrows ideas from Jabba and Bibliocraft, resulting in a highly functional, compact, and aesthetic storage solution that is meant to complement rather than replace those mods.</p>
+                <img src="https://media.forgecdn.net/attachments/32/862/2015-04-19_19.png">
+            </section>
+        
+      
+            <section id="NC">
+                <h2>NuclearCraft</h2>
+                <p>NuclearCraft is a tech mod created by tomdodd4598. It focuses on using nuclear power to provide energy. It supports the Forge Energy, IC2 EU and GregTech Community Edition EU power systems. It is currently developed for Minecraft version 1.12.2.</p>
+                <img src = "https://i0.wp.com/www.minecraftyard.com/wp-content/uploads/2016/07/NuclearCraft_Mod_3.jpg?fit=704%2C397&ssl=1">
+            </section>
+        
+       
+            <section id="J">
+                <h2>Jade</h2>
+                <p>Jade is the information HUD mod - Hwyla/Waila for modern Minecraft versions. Designed for better user experience and API.</p>
+                <img src="https://zonacraft.net/wp-content/uploads/2022/08/Jade-Mod-1000x563.jpg">
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pootis</p>
+    </footer>
+</body>
+
+</html>
