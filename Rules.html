@@ -52,11 +52,15 @@
         }
 
         main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex-grow: 1;
-            padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        padding: 20px;
+        position: relative; /* Add position: relative to allow scrolling within main */
+        z-index: 1; /* Ensure the main content is on top of the pseudo-element */
+        max-width: 600px; /* Set a max-width for the main content */
+        margin: 0 auto;
         }
 
         .side-panel {
