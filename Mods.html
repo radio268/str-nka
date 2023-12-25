@@ -10,11 +10,11 @@
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+            min-height: 100vh;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            overflow: hidden;
         }
 
         header {
@@ -57,7 +57,21 @@
             align-items: center;
             flex-grow: 1;
             padding: 20px;
+            background-color: #fff; /* Set a light background color for the main content area */
+            z-index: 1;
+            width: 1000px;
+            margin: 0 auto;
         }
+         body::before {
+            content: '';
+            background-color: #333; /* Set a dark background color */
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+         }
 
         .side-panel {
             background-color: #ddd;
