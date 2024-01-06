@@ -124,7 +124,7 @@
                 <li><a href="#contact">Dynmap</a></li>
                 <li><a href="contact.html">Contacts</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="howconect.html" class="active">Play</a></li>
+                <li><a href="howconect.php" class="active">Play</a></li>
             </ul>
         </nav>
     </header>
