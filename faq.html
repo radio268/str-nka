@@ -64,6 +64,16 @@
             margin: 0 auto;
             overflow-y: auto;
         }
+         body::before {
+            content: '';
+            background-color: #000000;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+         }
 
         .side-panel {
             background-color: #ddd;
