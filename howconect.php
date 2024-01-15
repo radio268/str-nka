@@ -15,6 +15,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            overflow-y: scroll;
         }
 
         header {
@@ -121,7 +122,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Mods.html">Mods</a></li>
                 <li><a href="Rules.html">Rules</a></li>
-                <li><a href="#contact">Dynmap</a></li>
+                <li><a href="http://cat.hostify.cz:36303/">Dynmap</a></li>
                 <li><a href="contact.html">Contacts</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="howconect.php" class="active">Play</a></li>

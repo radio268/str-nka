@@ -9,6 +9,7 @@
         .top_img {
              margin-top: -10px
         }
+
         body {
             display: flex;
             flex-direction: column;
@@ -17,6 +18,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            overflow-y: scroll;
         }
 
         header {
@@ -54,15 +56,15 @@
         }
 
         main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-grow: 1;
-        padding: 20px;
-        position: relative; /* Add position: relative to allow scrolling within main */
-        z-index: 1; /* Ensure the main content is on top of the pseudo-element */
-        max-width: 600px; /* Set a max-width for the main content */
-        margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px;
+            position: relative; /* Add position: relative to allow scrolling within main */
+            z-index: 1; /* Ensure the main content is on top of the pseudo-element */
+            max-width: 600px; /* Set a max-width for the main content */
+            margin: 0 auto;
         }
 
         .side-panel {
@@ -105,13 +107,13 @@
 
 <body>
     <header>
-        <img src="fontbolt1.png" alt="fontbolt1" class = "img_top">
+        <img src="fontbolt1.png" alt="fontbolt1" class = "top_img">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Mods.html">Mods</a></li>
                 <li><a href="Rules.html" class="active">Rules</a></li>
-                <li><a href="#contact">Dynmap</a></li>
+                <li><a href="http://cat.hostify.cz:36303/">Dynmap</a></li>
                 <li><a href="contact.html">Contacts</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="howconect.php">Play</a></li>
