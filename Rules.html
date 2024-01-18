@@ -55,18 +55,29 @@
         color: #333;
         }
 
+
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex-grow: 1;
             padding: 20px;
-            position: relative; /* Add position: relative to allow scrolling within main */
-            z-index: 1; /* Ensure the main content is on top of the pseudo-element */
-            max-width: 600px; /* Set a max-width for the main content */
+            background-color: #fff; /* Set a light background color for the main content area */
+            z-index: 1;
+            width: 1000px;
             margin: 0 auto;
+            overflow-y: auto;
         }
-
+         body::before {
+            content: '';
+            background-color: #000000;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+         }
         .side-panel {
             background-color: #ddd;
             padding: 20px;
