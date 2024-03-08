@@ -55,29 +55,18 @@
         color: #333;
         }
 
-
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
             flex-grow: 1;
             padding: 20px;
-            background-color: #fff; /* Set a light background color for the main content area */
-            z-index: 1;
-            width: 1000px;
+            position: relative; /* Add position: relative to allow scrolling within main */
+            z-index: 1; /* Ensure the main content is on top of the pseudo-element */
+            max-width: 600px; /* Set a max-width for the main content */
             margin: 0 auto;
-            overflow-y: auto;
         }
-         body::before {
-            content: '';
-            background-color: #000000;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: -1;
-         }
+
         .side-panel {
             background-color: #ddd;
             padding: 20px;
@@ -118,13 +107,13 @@
 
 <body>
     <header>
-        <img src="fontbolt1.png" alt="fontbolt1" class = "top_img">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://i.imgur.com/hlAQIXg.png" alt="fontbolt1" class = "top_img"></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Mods.html">Mods</a></li>
                 <li><a href="Rules.html" class="active">Rules</a></li>
-                <li><a href="http://cat.hostify.cz:36303/">Dynmap</a></li>
+                <li><a href="dynmap.html">Dynmap</a></li>
                 <li><a href="contact.html">Contacts</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="howconect.php">Play</a></li>
