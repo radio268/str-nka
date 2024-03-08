@@ -130,43 +130,57 @@
         </nav>
     </header>
 
-    <?php
-    // Replace these variables with your MySQL credentials
+
+
+
+
+    
+<?php
+    // MySQL udaje
     $servername = "localhost";
     $username = "milan";
     $password = "pasword";
     $dbname = "test";
 
-    // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Assuming the form field name is 'username'
-        $entered_username = $_POST['username'];
+        $entered_username = $_POST['in_game_name'    ];
+        $player_type      = $_POST['player_type'     ];
+        $aditional_reason = $_POST['additional_reason'];
 
-        // SQL query to insert the username into the 'test' table
-        $sql = "INSERT INTO test (username) VALUES ('$entered_username')";
+        // Construct SQL query
+        $sql = "INSERT INTO test (username, player_type, additional_reason) VALUES ('$entered_username', '$player_type', '$additional_reason')";
 
-        if ($conn->query($sql) === TRUE) {
+        // Execute SQL query
+        if ($conn->query($sql) === TRUE)
+        {
             echo '<p class="success-message">Username \'' . $entered_username . '\' added successfully!</p>';
-        } else {
-            echo '<p class="error-message">Error: ' . $sql . '<br>' . $conn->error . '</p>';
+        }
+        else
+        {
+            echo '<p class="error-message">Error: ' . $conn->error . '</p>';
         }
     }
-
     $conn->close();
 ?>
-    <div class="content">
-            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                Enter your username: <input type="text" name="username">
-                <input type="submit" value="Submit">
-            </form>
-      </div>
+
+    
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <input type="string" name="in_game_name" id=in_game_namenum1" required><br>      
+        <select name="player_type" id="player_type">
+            <option value="play">play</option>
+            <option value="talk">talk</option>
+            <option value="build">build</option>
+            <option value="mine">mine</option>
+        </select><br>
+        <input type="string" name="aditional_reason" id="additional_reason" required><br>
+        <input type="submit" value="submit">
+    </form>
             
        
     
