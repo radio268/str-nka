@@ -70,7 +70,7 @@
         }
          body::before {
             content: '';
-            background-image: url("https://i.imgur.com/mOBbDzx.png");
+            background-image: url("https://i.imgur.com/F7WAAvR.png");
             position: fixed;
             top: 0;
             bottom: 0;
