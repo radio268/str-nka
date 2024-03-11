@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pootis</title>
     <style>
-        /* General Styles */
+        
         .top_img {
              margin-top: -10px
         }
@@ -27,7 +27,6 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            margin-bottom: 20px;
         }
 
         nav ul {
@@ -63,7 +62,22 @@
             align-items: center;
             flex-grow: 1;
             padding: 20px;
+            background-color: #fff; /* Set a light background color for the main content area */
+            z-index: 1;
+            width: 1000px;
+            margin: 0 auto;
+            overflow-y: auto;
         }
+         body::before {
+            content: '';
+            background-image: url("https://i.imgur.com/mOBbDzx.png");
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+         }
 
         .side-panel {
             background-color: #ddd;
@@ -72,23 +86,10 @@
             max-width: 300px;
             margin-bottom: 20px;
         }
-        .success-message {
-            color: green;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .error-message {
-            color: red;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+
         .content {
             width: 100%;
             max-width: 800px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
         }
 
         footer {
@@ -111,8 +112,6 @@
         }
         .content {
             margin-left: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
             }
         }
     </style>
@@ -120,7 +119,7 @@
 
 <body>
     <header>
-        <img src="https://i.imgur.com/hlAQIXg.png" alt="fontbolt1" class = "top_img">
+        <img src="https://i.imgur.com/hlAQIXg.png" alt="fontbolt1">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -140,54 +139,71 @@
 
     
 <?php
-    // MySQL udaje
-    $servername = "localhost";
-    $username = "milan";
-    $password = "pasword";
-    $dbname = "test";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        // MySQL udaje
+        $servername = "localhost";
+        $username = "milan";
+        $password = "pasword";
+        $dbname = "test";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
         $entered_username = $_POST['in_game_name'    ];
         $player_type      = $_POST['player_type'     ];
         $aditional_reason = $_POST['additional_reason'];
 
-        // Construct SQL query
+        
         $sql = "INSERT INTO test (username, player_type, additional_reason) VALUES ('$entered_username', '$player_type', '$additional_reason')";
 
-        // Execute SQL query
+        
         if ($conn->query($sql) === TRUE)
         {
-            echo '<p class="success-message">Username \'' . $entered_username . '\' added successfully!</p>';
+            echo '<p class="success-message">Username data added successfully!</p>';
         }
         else
         {
             echo '<p class="error-message">Error: ' . $conn->error . '</p>';
         }
+        $conn->close();
     }
-    $conn->close();
+    
 ?>
 
     
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <input type="string" name="in_game_name" id=in_game_namenum1" required><br>      
-        <select name="player_type" id="player_type">
-            <option value="play">play</option>
-            <option value="talk">talk</option>
-            <option value="build">build</option>
-            <option value="mine">mine</option>
-        </select><br>
-        <input type="string" name="aditional_reason" id="additional_reason" required><br>
-        <input type="submit" value="submit">
-    </form>
+   
             
        
-    
+    <main>
+        <div class="content">
+            <section id="form">
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                    <p>in game name :
+                    <input type="string" name="in_game_name" id="in_game_name" required><br>
+                    type of player : 
+                        <select name="player_type" id="player_type">
+                            <option value="play">play</option>
+                            <option value="talk">talk</option>
+                            <option value="build">build</option>
+                            <option value="mine">mine</option>
+                            <option value="prefere not to say">prefere_not_to_say</option>
+                        </select><br>           
+                    why should we whitelits you :
+                    <input type="string" name="aditional_reason" id="additional_reason" required><br>
+                    <input type="submit" value="submit"><br></p>
+                </form>   
+            </section>
+      
+            <section id="safe?">
+                <h2>is my username safe</h2>
+                <p>Definitely not</p>
+            </section>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2023 Pootis</p>
