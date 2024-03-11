@@ -10,6 +10,7 @@
         .top_img {
              margin-top: -10px
         }
+                
         .button {
                 display: inline-block;
                 outline: 0;
@@ -17,7 +18,7 @@
                 border: 2px solid #000;
                 border-radius: 3px;
                 color: #fff;
-                background: #000;
+                background: #f0f0f0;
                 font-size: 20px;
                 font-weight: 600;
                 line-height: 28px;
@@ -28,7 +29,7 @@
                 transition-timing-function: cubic-bezier(.4,0,.2,1);
                 :hover{
                     color: #000;
-                    background: rgb(255, 218, 87);
+                    background: #fff;
                 }
                 
         body {
@@ -214,8 +215,8 @@
                             <option value="prefere not to say">prefer not to say</option>
                         </select><br>          
                     Why should we whitelist you?:
-                    <input type="string" name="aditional_reason" id="additional_reason" required><br>
-                    <input type="submit" value="submit"><br></p>
+                    <input type="string" name="aditional_reason" id="additional_reason" required><br><br>
+                    <input class = "button" type="submit" value="Submit"><br></p>
                 </form>   
             </section>
       
