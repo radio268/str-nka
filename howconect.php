@@ -193,12 +193,13 @@
                     <input type="string" name="in_game_name" id="in_game_name" required><br>
                     Type of player:             : 
                         <select name="player_type" id="player_type">
-                            <option value="play">play</option>
-                            <option value="talk">talk</option>
-                            <option value="build">build</option>
-                            <option value="mine">mine</option>
-                            <option value="prefere not to say">prefere_not_to_say</option>
-                        </select><br>           
+                            <option value="play">player</option>
+                            <option value="talk">talker</option>
+                            <option value="build">builder</option>
+                            <option value="mine">miner</option>
+                            <option value="redstone">redstoner</option>
+                            <option value="prefere not to say">prefer not to say</option>
+                        </select><br>          
                     Why should we whitelist you?:
                     <input type="string" name="aditional_reason" id="additional_reason" required><br>
                     <input type="submit" value="submit"><br></p>
