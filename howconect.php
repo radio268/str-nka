@@ -7,6 +7,10 @@
     <title>Pootis</title>
     <style>
         /* General Styles */
+        .top_img {
+             margin-top: -10px
+        }
+
         body {
             display: flex;
             flex-direction: column;
@@ -116,7 +120,7 @@
 
 <body>
     <header>
-        <img src="https://i.imgur.com/hlAQIXg.png" alt="fontbolt1" class = "">
+        <img src="https://i.imgur.com/hlAQIXg.png" alt="fontbolt1" class = "top_img">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
