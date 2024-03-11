@@ -119,7 +119,7 @@
 
 <body>
     <header>
-        <img src="https://i.imgur.com/hlAQIXg.png" alt="fontbolt1">
+        <img src="https://i.imgur.com/hlAQIXg.png" alt="fontbolt1" class="top_img">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
