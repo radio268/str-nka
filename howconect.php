@@ -10,7 +10,27 @@
         .top_img {
              margin-top: -10px
         }
-
+        .button {
+                display: inline-block;
+                outline: 0;
+                cursor: pointer;
+                border: 2px solid #000;
+                border-radius: 3px;
+                color: #fff;
+                background: #000;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 28px;
+                padding: 12px 20px;
+                text-align:center;
+                transition-duration: .15s;
+                transition-property: all;
+                transition-timing-function: cubic-bezier(.4,0,.2,1);
+                :hover{
+                    color: #000;
+                    background: rgb(255, 218, 87);
+                }
+                
         body {
             display: flex;
             flex-direction: column;
