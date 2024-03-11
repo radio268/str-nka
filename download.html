@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download File and Close Tab</title>
+</head>
+<body>
+    <script>
+        function downloadAndClose() {
+            // Create a temporary link element
+            var link = document.createElement('a');
+            link.href = 'modpack.rar'; // Specify the path to your file
+            link.download = 'modpack.rar'; // Specify the filename for the downloaded file
+
+            // Simulate a click on the link to trigger the download
+            link.click();
+
+            // Close the tab after a delay (adjust delay as needed)
+            setTimeout(function() {
+                window.close();
+            }, 1000); // Close the tab after 1 second
+        }
+
+        // Call the downloadAndClose function when the page loads
+        window.onload = downloadAndClose;
+    </script>
+</body>
+</html>
