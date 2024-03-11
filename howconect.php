@@ -183,7 +183,10 @@
             <section id="explain">
                 <h2>How to connect?</h2>
                 <p>To connect, please type in your minecraft nickname, then select your passion and lastly why should we even let you in.<br>Your request will be processed as soon as I get my morning coffee.</p>
-        <div class="content">
+            </section>
+        </div>
+                
+                <div class="content">
             <section id="form">
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <p>In game name:            :
