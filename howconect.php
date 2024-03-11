@@ -182,9 +182,9 @@
         <div class="content">
             <section id="form">
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                    <p>In game name:            :
+                    <p>In game name:            
                     <input type="string" name="in_game_name" id="in_game_name" required><br>
-                    Type of player:             : 
+                    Type of player:              
                         <select name="player_type" id="player_type">
                             <option value="play">player</option>
                             <option value="talk">talker</option>
