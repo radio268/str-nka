@@ -17,7 +17,7 @@
         body {
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Set the minimum height of the body to 100% of the viewport height */
+            min-height: 100vh;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -47,7 +47,7 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            padding: 8px 16px; /* Add padding for better click/tap experience */
+            padding: 8px 16px;
             border-radius: 5px;
         }
 
@@ -67,7 +67,7 @@
             align-items: center;
             flex-grow: 1;
             padding: 20px;
-            background-color: #fff; /* Set a light background color for the main content area */
+            background-color: #fff;
             z-index: 1;
             width: 1000px;
             margin: 0 auto;
@@ -156,7 +156,7 @@
         $password = "cYNOdVvCsEb56";
         $dbname = "if0_35790300_XXX";
 
-        
+
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         if ($conn->connect_error) {
@@ -189,12 +189,13 @@
             
        
     <main>
+        <!--  do not touch it will explode -->
         <div class="content">
             <section id="form">
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                    <p>In game name:            :
+                    <p>In game name:
                     <input type="string" name="in_game_name" id="in_game_name" required><br>
-                    Type of player:             : 
+                    Type of player:
                         <select name="player_type" id="player_type">
                             <option value="play">player</option>
                             <option value="talk">talker</option>
@@ -208,7 +209,9 @@
                     <input type="submit" value="submit"><br></p>
                 </form>   
             </section>
-      
+
+
+            <!--  questions -->
             <section id="safe?">
                 <h2>Is my information safe?</h2>
                 <p>Definitely not! :)</p>
@@ -216,6 +219,7 @@
         </div>
 
         <div class ="content">
+            <!--  how to conect -->
             <section id="explain">
                 <h2>How to connect?</h2>
                 <p>To connect, please type in your minecraft nickname, then select your passion and lastly why should we even let you in.<br>Your request will be processed as soon as I get my morning coffee.</p>
@@ -226,6 +230,7 @@
     <footer>
         <p>&copy; 2023 Pootis</p>
     </footer>
+
 </body>
 
 </html>
