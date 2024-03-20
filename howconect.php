@@ -1,37 +1,19 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pootis</title>
+
     <style>
-        
         .top_img {
              margin-top: -10px
         }
-                
-        .button {
-                display: inline-block;
-                outline: 0;
-                cursor: pointer;
-                border: 2px solid #000;
-                border-radius: 3px;
-                color: #fff;
-                background: #f0f0f0;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 28px;
-                padding: 12px 20px;
-                text-align:center;
-                transition-duration: .15s;
-                transition-property: all;
-                transition-timing-function: cubic-bezier(.4,0,.2,1);
-                :hover{
-                    color: #000;
-                    background: #fff;
-                }
-                
+
         body {
             display: flex;
             flex-direction: column;
@@ -68,10 +50,12 @@
             padding: 8px 16px; /* Add padding for better click/tap experience */
             border-radius: 5px;
         }
+
          nav ul li a:hover {
             background-color: #fff;
             color: #333;
         }
+
         nav ul li a.active {
         background-color: #fff;
         color: #333;
@@ -89,6 +73,7 @@
             margin: 0 auto;
             overflow-y: auto;
         }
+
          body::before {
             content: '';
             background-image: url("https://i.imgur.com/6t8Dm6M.png");
@@ -98,7 +83,7 @@
             left: 0;
             right: 0;
             z-index: -1;
-         }
+        }
 
         .side-panel {
             background-color: #ddd;
@@ -121,20 +106,23 @@
             margin-top: auto;
         }
 
-        /* Media Query for Tablet/Desktop */
         @media (min-width: 768px) {
+
             main {
                 flex-direction: row;
                 justify-content: center;
             }
-        .side-panel {
-            order: -1; /* Move the side-panel to the left */
-            margin-right: 20px; /* Add some margin for better separation */
-        }
-        .content {
-            margin-left: 20px;
+
+            .side-panel {
+                order: -1;
+                margin-right: 20px;
+            }
+
+            .content {
+                margin-left: 20px;
             }
         }
+
     </style>
 </head>
 
@@ -165,9 +153,10 @@
         // MySQL udaje
         $servername = "sql303.infinityfree.com";
         $username = "if0_35790300";
-        $password = "cYNOdVvCsEb56 ";
+        $password = "cYNOdVvCsEb56";
         $dbname = "if0_35790300_XXX";
 
+        
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         if ($conn->connect_error) {
@@ -195,7 +184,6 @@
     
 ?>
 
-
     
    
             
@@ -204,9 +192,9 @@
         <div class="content">
             <section id="form">
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                    <p>In game name:            
+                    <p>In game name:            :
                     <input type="string" name="in_game_name" id="in_game_name" required><br>
-                    Type of player:              
+                    Type of player:             : 
                         <select name="player_type" id="player_type">
                             <option value="play">player</option>
                             <option value="talk">talker</option>
@@ -216,8 +204,8 @@
                             <option value="prefere not to say">prefer not to say</option>
                         </select><br>          
                     Why should we whitelist you?:
-                    <input type="string" name="aditional_reason" id="additional_reason" required><br><br>
-                    <input class = "button" type="submit" value="Submit"><br></p>
+                    <input type="string" name="aditional_reason" id="additional_reason" required><br>
+                    <input type="submit" value="submit"><br></p>
                 </form>   
             </section>
       
