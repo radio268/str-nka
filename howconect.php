@@ -163,10 +163,10 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // MySQL udaje
-        $servername = "localhost";
-        $username = "milan";
-        $password = "pasword";
-        $dbname = "test";
+        $servername = "sql303.infinityfree.com";
+        $username = "if0_35790300";
+        $password = "cYNOdVvCsEb56 ";
+        $dbname = "if0_35790300_XXX";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -194,6 +194,7 @@
     }
     
 ?>
+
 
     
    
