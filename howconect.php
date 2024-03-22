@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pootis</title>
 
-<!-- style list  --------------------------------------------------------------------------------------->
+
+<!-- style list  ---------------------------------------------------------------------------------------------->
     <style>
         .top_img {
              margin-top: -10px
@@ -124,6 +125,7 @@
     </style>
 </head>
 
+
 <!-- logo + navigation  --------------------------------------------------------------------------------------->        
 <body>
     <header>
@@ -143,9 +145,6 @@
 
 
 <!-- php scrypt  ---------------------------------------------------------------------------------------------->
-      
-
-    
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -154,7 +153,6 @@
         $username = "if0_35790300";
         $password = "cYNOdVvCsEb56";
         $dbname = "if0_35790300_XXX";
-
 
         $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -167,9 +165,7 @@
         $player_type      = $_POST['player_type'     ];
         $aditional_reason = $_POST['additional_reason'];
 
-        
         $sql = "INSERT INTO test (username, player_type, additional_reason) VALUES ('$entered_username', '$player_type', '$additional_reason')";
-
         
         if ($conn->query($sql) === TRUE)
         {
@@ -179,15 +175,14 @@
         {
             echo '<p class="error-message">Error: ' . $conn->error . '</p>';
         }
+        
         $conn->close();
     }
     
 ?>
 
-    
-   
-<!-- main content  --------------------------------------------------------------------------------------->
-       
+
+<!-- main content  -------------------------------------------------------------------------------------------->
     <main>
         <!--  do not touch it will explode -->
         <div class="content">
@@ -203,13 +198,12 @@
                             <option value="mine">miner</option>
                             <option value="redstone">redstoner</option>
                             <option value="prefere not to say">prefer not to say</option>
-                        </select><br>          
+                        </select><br>
                     Why should we whitelist you?:
                     <input type="string" name="aditional_reason" id="additional_reason" required><br>
                     <input type="submit" value="submit"><br></p>
                 </form>   
             </section>
-
 
             <!--  questions -->
             <section id="safe?">
@@ -227,7 +221,8 @@
         </div>
     </main>
 
-<!-- footer  --------------------------------------------------------------------------------------->
+
+<!-- footer  -------------------------------------------------------------------------------------------------->
     <footer>
         <p>&copy; 2023 Pootis</p>
     </footer>
