@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
     <html lang="en">
 
@@ -9,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pootis</title>
 
+<!-- style list  --------------------------------------------------------------------------------------->
     <style>
         .top_img {
              margin-top: -10px
@@ -126,6 +124,7 @@
     </style>
 </head>
 
+<!-- logo + navigation  --------------------------------------------------------------------------------------->        
 <body>
     <header>
         <img src="https://i.imgur.com/hlAQIXg.png" alt="fontbolt1" class="top_img">
@@ -143,8 +142,8 @@
     </header>
 
 
-
-
+<!-- php scrypt  ---------------------------------------------------------------------------------------------->
+      
 
     
 <?php
@@ -160,6 +159,7 @@
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         if ($conn->connect_error) {
+            echo "something went wrong and the conection failed";
             die("Connection failed: " . $conn->connect_error);
         }
 
@@ -186,7 +186,7 @@
 
     
    
-            
+<!-- main content  --------------------------------------------------------------------------------------->
        
     <main>
         <!--  do not touch it will explode -->
@@ -227,10 +227,10 @@
         </div>
     </main>
 
+<!-- footer  --------------------------------------------------------------------------------------->
     <footer>
         <p>&copy; 2023 Pootis</p>
     </footer>
 
 </body>
-
 </html>
