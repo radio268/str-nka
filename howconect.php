@@ -177,6 +177,9 @@
         }
         
         $conn->close();
+
+        //mylanova bordel hromada
+        //&nbsp
     }
     
 ?>
